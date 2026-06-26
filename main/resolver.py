@@ -1,6 +1,6 @@
 from network import send_query
 from cache import cache_get,cache_set
-from utils import  RCODE_NXDOMAIN,RCODE_NOTIMP,RCODE_SERVFAIL,RCODE_FORMERR,RCODE_NOERROR,RCODE_REFUSED,get_rcode
+from utils import  RCODE_NXDOMAIN, get_rcode
 from utils import is_noerror
 
 NXDOMAIN_TTL=300

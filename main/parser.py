@@ -1,7 +1,6 @@
 
 from models import DNSQuestion,DNSHeader,DNSRecord,DNSPacket
 import struct
-import dataclasses
 from io import BytesIO
 from utils import ip_to_string,ip_to_string_v6
 
