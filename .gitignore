@@ -1,0 +1,7 @@
+#create your own blocklist
+blocklist.txt
+docs.ipynb
+#Database
+dnsCache.db
+dnsCache.db-shm
+dnsCache.db-wal
