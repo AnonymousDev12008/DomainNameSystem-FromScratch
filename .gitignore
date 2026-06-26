@@ -1,6 +1,7 @@
 #create your own blocklist
 blocklist.txt
 docs.ipynb
+main/dns.py
 #Database
 dnsCache.db
 dnsCache.db-shm

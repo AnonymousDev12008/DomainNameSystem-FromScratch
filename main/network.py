@@ -1,6 +1,6 @@
 from parser import parse_DNSPacket
 import socket
-from main.main.main import build_query
+from encoder import build_query
 
 def send_query(ip_address, domain_name, record_type):
     query=build_query(domain_name, record_type)
