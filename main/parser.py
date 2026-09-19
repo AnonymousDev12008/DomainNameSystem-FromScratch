@@ -66,9 +66,15 @@ def parse_record(reader):
     elif type_ == TYPE_CNAME:
         data = parse_name_v2(reader)
     elif type_ == TYPE_A:
-        data = ip_to_string(reader.read(data_len))
+        if (data_len==4):
+            data = ip_to_string(reader.read(data_len))
+        else:
+            return None
     elif type_ == TYPE_AAAA:
-        data = ip_to_string_v6(reader.read(data_len))
+        if (data_len==16):
+            data = ip_to_string_v6(reader.read(data_len))
+        else:
+            return None
     else:
         data = reader.read(data_len)
     return DNSRecord(name, type_, class_, ttl, data)
