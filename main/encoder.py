@@ -31,7 +31,7 @@ def record_to_bytes(record: DNSRecord):
     if record.data is None:
         data = b""
     elif record.type_ == TYPE_A:
-        data = socket.inet_aton(record.data if isinstance(record.data, str) else record.data.decode("utf-8"))
+        data = socket.inet_pton(socket.AF_INET, record.data if isinstance(record.data, str) else record.data.decode("utf-8"))
     elif record.type_ == TYPE_AAAA:
         data = socket.inet_pton(socket.AF_INET6, record.data if isinstance(record.data, str) else record.data.decode("utf-8"))
     elif record.type_ in (TYPE_NS, TYPE_CNAME):
